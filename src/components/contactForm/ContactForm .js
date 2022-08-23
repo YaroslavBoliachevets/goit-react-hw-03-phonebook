@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
-import {FormInput, Label, Input} from './Form.styled'
+import PropTypes from 'prop-types';
+import {FormInput, Label, Input} from './ContactForm .styled'
 ;
 
-class Form extends Component {
+class ContactForm  extends Component {
   state = {
     name: '',
     number: '',
@@ -61,4 +62,8 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default ContactForm ;
+
+ContactForm.propTypes = {
+  onSubmit: PropTypes.func,
+}
